@@ -157,7 +157,7 @@ body {
 }
 
 .plan-detail:last-child .detail-icon {
-    display: none;       /
+    display: none;       
 }
 
 .detail-label {
@@ -354,83 +354,151 @@ body {
         min-height: 100vh;
     }
     
+    /* ШАПКА */
     .email-header {
         padding: 16px;
         flex-wrap: wrap;
         gap: 12px;
     }
     
+    .logo-block {
+        gap: 12px;
+    }
+    
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
     .logo-text {
-        font-size: 22px;
+        font-size: 20px;
     }
     
     .action-badge {
         font-size: 12px;
     }
     
+    /* ОСНОВНОЙ КОНТЕНТ */
     .email-content {
         padding: 20px;
     }
     
     .traffic-title {
-        font-size: 24px;
+        font-size: 22px;
+        margin-bottom: 16px;
     }
     
     .traffic-message {
         font-size: 14px;
+        max-width: 100%;
+    }
+    
+    .traffic-message.last {
+        margin-bottom: 20px;
+    }
+    
+    /* КОНТЕЙНЕР ПЛАНОВ */
+    .plans-container {
+        padding: 0 12px 12px;
+        margin-bottom: 16px;
     }
     
     .plan-block {
-        padding: 16px;
+        padding: 16px 0 0;
     }
     
     .plan-title {
-        font-size: 15px;
-    }
-    
-    .detail-label,
-    .detail-value {
         font-size: 13px;
+        letter-spacing: 0.5px;
+        margin-bottom: 12px;
     }
     
+    /* ДЕТАЛИ ПЛАНОВ (вертикальное расположение) */
     .plan-detail {
         flex-direction: column;
+        align-items: flex-start;
         gap: 4px;
     }
     
+    .detail-icon {
+        margin-bottom: 0;
+    }
+    
+    .detail-label {
+        font-size: 13px;
+    }
+    
     .detail-value {
+        font-size: 13px;
         text-align: left;
-        padding-left: 20px;
+        padding-left: 32px;  /* отступ под иконку */
+    }
+    
+    /* ШКАЛА */
+    .progress-bar-wrapper {
+        height: 8px;
+        margin: 8px 0 12px;
+    }
+    
+    /* ПРИМЕЧАНИЕ */
+    .note-text {
+        font-size: 11px;
+        margin-top: 8px;
+    }
+    
+    /* КНОПКА */
+    .button-block {
+        padding: 0 16px 16px;
     }
     
     .pay-button {
         width: 100%;
-        max-width: 260px;
+        max-width: 100%;
         font-size: 16px;
-        height: 48px;
+        height: 52px;
+        padding: 14px 20px;
     }
     
-    .fallback-block,
+    /* АЛЬТЕРНАТИВНАЯ ССЫЛКА */
+    .fallback-block {
+        padding: 0 16px 12px;
+    }
+    
+    .fallback-text {
+        font-size: 10px;
+    }
+    
+    .fallback-link {
+        font-size: 10px;
+    }
+    
+    /* ССЫЛКА ОТКАЗА ОТ РАССЫЛКИ */
     .unsubscribe-block {
-        padding: 0 16px 16px;
+        padding: 4px 16px 4px;
+        gap: 6px;
     }
     
-    .fallback-text,
-    .fallback-link,
     .unsubscribe-link {
         font-size: 10px;
     }
     
+    /* ФУТЕР */
+    .email-footer {
+        padding: 16px 16px 20px;
+    }
+    
     .footer-links {
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
+        margin-bottom: 12px;
     }
     
     .footer-link {
         font-size: 11px;
     }
     
-    .copyright {
-        font-size: 10px;
+    .copyright p {
+        font-size: 9px;
+        line-height: 1.4;
     }
 }
