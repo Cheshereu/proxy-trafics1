@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: local('SF Pro Text'), local('SFProText-Regular');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: local('SF Pro Text Semibold'), local('SFProText-Semibold');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Nersans One';
+    src: url('fonts/norsansone-webfont.woff2') format('woff2');
+    font-weight: normal;
+}
+
+body {
+    background-color: #1E1E1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 32px 16px;
+}
+
+/* ========== КОНТЕЙНЕР ========== */
+.email-wrapper {
+    width: 640px;
+    height: 100%;             
+    max-width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.email-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========== ШАПКА ========== */
+.email-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.logo-block {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-text {
+    font-family: 'Nersans One', 'SF Pro', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.action-badge {
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569;
+}
+
+/* ========== ОСНОВНОЙ КОНТЕНТ ========== */
+.email-content {
+    padding: 32px 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    flex: 1;
+}
+
+.traffic-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.traffic-message {
+    font-size: 15px;
+    color: #6B7280;
+    max-width: 500px;
+}
+
+.traffic-message.last {
+    margin-bottom: 20px;
+}
+
+.brand-blue {
+    color: #2563EB;
+    font-weight: 600;
+}
+
+/* ========== ОБЪЕДИНЕННЫЕ БЛОКИ ПЛАНОВ (БЕЗ РАССТОЯНИЯ) ========== */
+.plans-container {
+    width: 100%;
+    background-color: #F1F5F9;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 0 20px 20px;
+    margin-bottom: 20px;
+}
+
+.plan-block {
+    padding: 24px 0 0;
+}
+
+.plan-block:last-child {
+    border-bottom: none;
+}
+
+.plan-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 16px;
+    letter-spacing: 0.6px
+}
+
+.plan-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.plan-detail:last-child {
+    gap: 0;            
+    padding-bottom: 0;
+}
+
+.plan-detail:last-child .detail-icon {
+    display: none;       /
+}
+
+.detail-label {
+    font-size: 16px;
+    color: #334155;
+    font-weight: 500;
+    flex: 1;
+    text-align: left;
+}
+
+.detail-value {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: right;
+    flex-shrink: 0;
+}
+.plan-detail:last-child .detail-label {
+    font-weight: 400;
+    color: #64748B;
+}
+.value-used {
+    color: #0F172A;
+}
+
+.value-used.warning {
+    color: #0F172A;        /* оранжевый для критического остатка */
+}
+
+.value-separator {
+    color: #94A3B8;
+}
+
+.value-total {
+    color: #94A3B8;
+}
+.detail-value.date {
+    font-weight: 600;        /* Semibold */
+}
+/* ========== ИКОНКА-ФОТО ========== */
+.detail-icon{
+  width: 20px;
+  height: 20px;
+}
+.icon-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+/* ========== ШКАЛА ЗАПОЛНЕНИЯ ========== */
+.progress-bar-wrapper {
+    width: 100%;
+    height: 10px;
+    background-color: #E2E8F0;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin: 6px 0 16px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #2563EB;
+    border-radius: 9999px;
+    transition: width 0.3s ease;
+}
+
+/* ПРИМЕЧАНИЕ */
+.note-text {
+    font-size: 12px;
+    color: #9CA3AF;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* ========== КНОПКА ========== */
+.button-block {
+    width: 100%;
+    padding: 0 32px 16px;
+    text-align: center;
+}
+
+.pay-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2563EB;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    width: 282px;
+    height: 60px;
+    padding: 18px 48px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+}
+
+.pay-button:hover {
+    background-color: #1D4ED8;
+}
+
+
+/* ========== АЛЬТЕРНАТИВНАЯ ССЫЛКА ========== */
+.fallback-block {
+    width: 100%;
+    text-align: center;
+    padding: 0 32px 12px;
+}
+
+.fallback-text {
+    font-size: 12px;
+    color: #6B7280;
+}
+
+.fallback-link {
+    font-size: 12px;
+    color: #2563EB;
+    text-decoration: underline;
+    word-break: break-all;
+}
+/* ========== ССЫЛКА ОТКАЗА ОТ РАССЫЛКИ ========== */
+.unsubscribe-block {
+    width: 100%;
+    text-align: center;
+    padding: 4px 32px 4px;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.unsubscribe-link {
+    font-size: 12px;
+    transition: color 0.2s;
+}
+
+.unsubscribe-link.no-underline {
+    text-decoration: none;
+    color: #9CA3AF;
+}
+
+.unsubscribe-link.no-underline:hover {
+    color: #2563EB;
+}
+
+.unsubscribe-link.blue {
+    color: #2563EB;
+    text-decoration: underline;
+}
+
+.unsubscribe-link.blue:hover {
+    color: #1D4ED8;
+}
+
+/* ========== ФУТЕР ========== */
+.email-footer {
+    padding: 16px 32px 16px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 16px;
+}
+
+.footer-link {
+    font-size: 12px;
+    color: #6B7280;
+    text-decoration: underline;
+}
+
+.footer-link:hover {
+    color: #111827;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #9CA3AF;
+    line-height: 1.5;
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+@media (max-width: 640px) {
+    body {
+        padding: 0;
+    }
+    
+    .email-wrapper {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .email-header {
+        padding: 16px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    
+    .logo-text {
+        font-size: 22px;
+    }
+    
+    .action-badge {
+        font-size: 12px;
+    }
+    
+    .email-content {
+        padding: 20px;
+    }
+    
+    .traffic-title {
+        font-size: 24px;
+    }
+    
+    .traffic-message {
+        font-size: 14px;
+    }
+    
+    .plan-block {
+        padding: 16px;
+    }
+    
+    .plan-title {
+        font-size: 15px;
+    }
+    
+    .detail-label,
+    .detail-value {
+        font-size: 13px;
+    }
+    
+    .plan-detail {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .detail-value {
+        text-align: left;
+        padding-left: 20px;
+    }
+    
+    .pay-button {
+        width: 100%;
+        max-width: 260px;
+        font-size: 16px;
+        height: 48px;
+    }
+    
+    .fallback-block,
+    .unsubscribe-block {
+        padding: 0 16px 16px;
+    }
+    
+    .fallback-text,
+    .fallback-link,
+    .unsubscribe-link {
+        font-size: 10px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .footer-link {
+        font-size: 11px;
+    }
+    
+    .copyright {
+        font-size: 10px;
+    }
+}
