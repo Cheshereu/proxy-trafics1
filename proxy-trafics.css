@@ -93,18 +93,21 @@ body {
 }
 
 .traffic-title {
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 28px;
     font-weight: 700;
     color: #111827;
     margin-bottom: 20px;
     text-align: left;
     width: 100%;
+    line-height: 22px;
 }
 
 .traffic-message {
     font-size: 15px;
     color: #6B7280;
     max-width: 500px;
+    line-height: 22px;
 }
 
 .traffic-message.last {
@@ -222,7 +225,12 @@ body {
     border-radius: 9999px;
     transition: width 0.3s ease;
 }
-
+.plan-block:last-child .plan-detail:first-of-type {
+    margin-bottom: 16px;
+}
+.plan-detail.no-progress {
+    margin-bottom: 16px;
+}
 /* ПРИМЕЧАНИЕ */
 .note-text {
     font-size: 12px;
@@ -230,6 +238,7 @@ body {
     text-align: center;
     margin-top: auto;
     width: 100%;
+    line-height: 22px;
 }
 
 /* ========== КНОПКА ========== */
@@ -271,6 +280,7 @@ body {
 .fallback-text {
     font-size: 12px;
     color: #6B7280;
+    line-height: 18px;
 }
 
 .fallback-link {
@@ -278,6 +288,7 @@ body {
     color: #2563EB;
     text-decoration: underline;
     word-break: break-all;
+    line-height: 18px;
 }
 /* ========== ССЫЛКА ОТКАЗА ОТ РАССЫЛКИ ========== */
 .unsubscribe-block {
@@ -323,6 +334,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 24px;
+    line-height: 18px;
     margin-bottom: 16px;
 }
 
